@@ -30,7 +30,7 @@ press shift+i to edit
 cd .kube
 cat config
 ```
-```
+
 ```xml
 cat /home/<user>/.minikube/ca.crt | base64 -w 0 
 ```
