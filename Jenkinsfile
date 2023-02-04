@@ -1,5 +1,9 @@
 pipeline{
-    agent any
+    // agent any 
+    // or
+    agent{
+        label "master"
+    }
     stages{
         stage("github checkout"){
             steps{
