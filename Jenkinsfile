@@ -24,8 +24,10 @@ pipeline{
           steps{
               echo "====++++executing k8s++++===="
               script {
-                kubernetesDeploy(configs: "flask.yaml", kubeconfigId: "myKubeConfig") 
-                
+               kubeconfig(credentialsId: 'myKubeConfig', serverUrl: 'https://192.168.59.101:8443') {
+                    sh 'kubectl get nodes'
+                }
+                                
               }
           }
           post{
