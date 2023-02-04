@@ -1,6 +1,6 @@
 pipeline{
     agent{
-        label "master"
+        label "hello-k8s"
     }
     stages{
         stage("github checkout"){
