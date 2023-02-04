@@ -26,6 +26,7 @@ pipeline{
               script {
                kubeconfig(credentialsId: 'myKubeConfig', serverUrl: 'https://192.168.59.101:8443') {
                     sh 'kubectl get nodes'
+                    sh 'kubectl apply -f flask.yaml'
                 }
                                 
               }
