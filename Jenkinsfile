@@ -1,6 +1,6 @@
 pipeline{
     agent{
-        label "hello-k8s"
+        label "master"
     }
     stages{
         stage("github checkout"){
@@ -25,6 +25,7 @@ pipeline{
               echo "====++++executing k8s++++===="
               script {
                 kubernetesDeploy(configs: "flask.yaml", kubeconfigId: "myKubeConfig") 
+                
               }
           }
           post{
