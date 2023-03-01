@@ -4,7 +4,7 @@ pipeline{
     agent{
         label "master"
     }
-    stages{z
+    stages{
         stage("github checkout"){
             steps{
                 echo "========executing github checkout========"
@@ -22,7 +22,7 @@ pipeline{
                 }
             }
         }
-      stage("k8s"){
+        stage("k8s"){
           steps{
               echo "====++++executing k8s++++===="
               script {
@@ -45,8 +45,8 @@ pipeline{
                   echo "====++++k8s execution failed++++===="
               }
       
-          }
-      }
+            }
+        }
     }
     post{
         always{
