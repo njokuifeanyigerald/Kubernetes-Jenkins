@@ -26,17 +26,12 @@ pipeline{
           steps{
               echo "====++++executing k8s++++===="
               script {
-            //    kubeconfig(credentialsId: 'myKubeConfig', serverUrl: 'https://192.168.59.101:8443') {
-            //         sh 'kubectl get nodes'
-            //         sh 'kubectl apply -f flask.yaml'
-            //         sh 'kubectl get all'
-            //     }
-                kubeconfig(credentialsId: 'kube', serverUrl: 'https://192.168.59.101:8443') {
-                    // some block
+                kubeconfig(credentialsId: 'myKubeConfig', serverUrl: 'https://192.168.59.101:8443') {
                     sh 'kubectl get nodes'
                     sh 'kubectl apply -f flask.yaml'
                     sh 'kubectl get all'
                 }
+           
                                 
               }
           }
