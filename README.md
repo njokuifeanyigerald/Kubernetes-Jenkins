@@ -50,8 +50,7 @@ cat /home/<user>/.minikube/profiles/minikube/client.key | base64 -w 0
 
 - click on `Manage Jenkins`, under it, click on  `manage plugin`, then  download a plugin called **kubernetes** from there and install it
 
-- click on `Manage Nodes and Cloud`, under it, click on `configure cloud`, click `Add a new cloud`, under it start the configuration
-
-- in the `credentials` click `Add` to add a credential, choose `secret file`, look for `config` in the *.kube* directory, add the name as 
+- click on `Manage Nodes and Cloud`, under it, click on `built in node`, click `configure` and put `master` as the label
+- in the `credentials` click `Add` to add a credential, choose `secret file`, look for `config` in the *.kube* directory, add the `config file` in the secret text and name it `kubeConfig`
 
 
